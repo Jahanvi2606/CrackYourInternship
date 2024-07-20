@@ -1,0 +1,16 @@
+https://leetcode.com/problems/move-zeroes/submissions/1327097081
+
+function moveZeroes(nums) {
+    let nonZeroIndex = 0;
+    
+    // Move non-zero elements to the front
+    for (let current = 0; current < nums.length; current++) {
+        if (nums[current] !== 0) {
+            // Swap elements
+            let temp = nums[nonZeroIndex];
+            nums[nonZeroIndex] = nums[current];
+            nums[current] = temp;
+            nonZeroIndex++;
+        }
+    }
+}
