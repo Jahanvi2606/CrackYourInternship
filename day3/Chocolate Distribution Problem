@@ -1,0 +1,14 @@
+class Solution{
+    findMinDiff(arr,n,m){
+        let diff = Infinity;
+        let i=0;
+   arr.sort(function(a, b){return a - b});
+  while(m<=n){
+     let cur_diff = arr[m-1]-arr[i];
+     diff =Math.min(cur_diff,diff);
+     m++;
+     i++;
+  }
+  return diff;
+    }
+}
