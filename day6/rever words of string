@@ -1,0 +1,11 @@
+var reverseWords = function(s) {
+  let words = s.trim().split(/\s+/);
+  
+  // Reverse the order of the words array
+  words.reverse();
+  
+  // Join the words back into a string with a single space separator
+  return words.join(' ');
+
+}
+    
